@@ -1,4 +1,4 @@
-import { Component, Renderer2 } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,22 +6,41 @@ import { Component, Renderer2 } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  isShowed = false;
+  headerHeight = "90px";
 
-  constructor(private renderer: Renderer2) {}
+  @ViewChild('header') headerElement?: ElementRef;
+  @ViewChild('h1') h1Element?: ElementRef;
 
-  ngOnInit() {
-    // const script = this.renderer.createElement('script');
-    // script.type = 'text/javascript';
-    // script.text = `
-    // const hamburger = document.querySelector('.hamburger');
-    // const header = document.querySelector('.header');
-    
-    // hamburger.addEventListener('click', () => {
-    //   header.style.top = 0;
-    // });
-    
-    // `;
-    // this.renderer.appendChild(document.body, script);
+  @ViewChild('img') imgElement?: ElementRef;
+  @ViewChild('bio') bioElement?: ElementRef;
+  @ViewChild('socials') socialsElement?: ElementRef;
+  @ViewChild('nav') navElement?: ElementRef;
+
+  constructor() { }
+
+  showMenu() {
+    if (!this.isShowed && this.headerElement) {
+      console.log(this.isShowed);
+      this.headerElement!.nativeElement.style.display = 'none';
+// this.h1Element!.nativeElement.style.display = 'block'
+      // this.imgElement!.nativeElement.style.display = 'none'
+      // this.bioElement!.nativeElement.style.display = 'none'
+      // this.socialsElement!.nativeElement.style.display = 'none'
+      // // this.isShowed = !this.isShowed;
+
+      // Implement your logic for showing the menu
+    }
+    else {
+      console.log(this.isShowed);
+
+      this.headerElement!.nativeElement.style.display = 'block';
+      // this.imgElement!.nativeElement.style.display = 'block'
+      // this.bioElement!.nativeElement.style.display = 'block'
+      // this.socialsElement!.nativeElement.style.display = 'inline-block'
+
+    }
+    this.isShowed = !this.isShowed;
+
   }
-
 }
