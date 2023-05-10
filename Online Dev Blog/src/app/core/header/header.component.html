@@ -1,14 +1,14 @@
-<header class="header" [ngStyle]="{'background-color': isShowed ? 'transparent' : ''}">
+<header class="header" >
     <div class="hamburger" (click)="showMenu()"></div>
-    <!-- Add this HTML code -->
-    <div #header [ngClass]="{'slide-down': isShowed}">
+    <div #header [@slideInOut]="stateName" [style.opacity]="isShowed ? '1' : '1'">
         <div class="logo" #logo>
-            <h1 #h1>Boqn's Blog</h1>
-            <img #img
-                src="https://media.licdn.com/dms/image/D4E03AQEwRvFzK1D3Lg/profile-displayphoto-shrink_100_100/0/1665508860091?e=1688601600&v=beta&t=QUkp2IaN1oGpK5gPV03cAXKw_TyZ9d1frHnziNJ76ag"
-                alt="">
+            <br>
+            <h1 #h1 [style.visibility]="isShowed ? 'visible' : 'visible'" [style.opacity]="isShowed ? '1' : '1'">Boqn's Blog</h1>
+            <img #img src="https://avatars.githubusercontent.com/u/97385003?v=4" alt="none">
         </div>
-        <div class="biography" #bio>Hi, my name is Anthony Doe. Briefly introduce yourself here. You can also provide a link
+        <br>
+        <div class="biography" #bio>Hi, my name is Anthony Doe. Briefly introduce yourself here. You can also provide a
+            link
             to
             the about page.<br><a href="about.html">Find out more about me</a></div>
         <ul class="social-list" #socials>
@@ -48,8 +48,8 @@
                         </path>
                     </svg><!-- <i class="fab fa-codepen fa-fw"></i> Font Awesome fontawesome.com --></a></li>
         </ul>
-        <hr>
-        <nav>
+        <hr #hr>
+        <nav #nav>
             <ul>
                 <li><a href="#"><i></i><svg xmlns="http://www.w3.org/2000/svg" viewBox="2 -5 24 24" width="22"
                             data-prefix="fas" data-icon="bookmark" role="img" height="22" aria-hidden="true">
