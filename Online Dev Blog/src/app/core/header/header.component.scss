@@ -1,9 +1,9 @@
 @media screen and (max-width: 1000px) {
-  .header {
-    position: fixed;
-    top: -100%;
-    /* other styles... */
-  }
+  // .header {
+  //   position: fixed;
+   
+  //   /* other styles... */
+  // }
 
   /* Add a hamburger button */
   .hamburger {
@@ -73,7 +73,7 @@
     width: 250px;
     /* Adjust this value to change the width of the aside */
     background-color: #5FCB71;
-    padding: 20px;
+    // padding: 20px;
     box-sizing: border-box;
   }
 
@@ -196,7 +196,7 @@
 }
 
 // Responsive
-@media screen and (max-width: 1000px) and (min-height: 700px) {
+@media screen and (max-width: 1000px)  {
 
   /* Show the header when the screen size is less than 700px and the height is at least 700px */
   .header {

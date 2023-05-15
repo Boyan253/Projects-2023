@@ -39,7 +39,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       ]
       )])
     ]),
-    
+
     trigger('colorChange', [
       state('green', style({
         'background-color': 'green'
@@ -54,7 +54,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ]
 })
 export class HeaderComponent {
-  isShowed = false;
+  isShowed = true;
   isGreen = false;
 
   @ViewChild('header') headerElement?: ElementRef;
@@ -79,6 +79,16 @@ export class HeaderComponent {
     } else {
       this.isShowed = false;
     }
+    setTimeout(() => {
+      this.headerElement!.nativeElement.style.opacity = '1';
+      if (this.isShowed === false) {
+
+        this.headerElement!.nativeElement.style.maxHeight = '75px';
+      }
+
+      // this.headerElement!.nativeElement.style.height = 'auto'
+    }, 1400)
+
   }
 
   toggleMenu() {
@@ -98,6 +108,11 @@ export class HeaderComponent {
     this.isGreen = this.isShowed && window.innerWidth <= 1000;
     setTimeout(() => {
       this.headerElement!.nativeElement.style.opacity = '1';
+      if (this.isShowed === false) {
+
+        this.headerElement!.nativeElement.style.maxHeight = '75px';
+      }
+
       // this.headerElement!.nativeElement.style.height = 'auto'
     }, 1400)
   }
