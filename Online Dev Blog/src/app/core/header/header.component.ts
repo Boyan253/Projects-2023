@@ -12,14 +12,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         'max-height': '500px', 'opacity': '1', 'visibility': 'visible'
       })),
       state('out', style({
-        'max-height': '0px', 'opacity': '0', 'visibility': 'hidden'
+        'max-height': '75px', 'opacity': '0', 'visibility': 'hidden'
       })),
       transition('in => out', [group([
         animate('400ms ease-in-out', style({
           'opacity': '0'
         })),
         animate('600ms ease-in-out', style({
-          'max-height': '0px'
+          'max-height': '75px'
         })),
         animate('700ms ease-in-out', style({
           'visibility': 'hidden'
@@ -79,15 +79,17 @@ export class HeaderComponent {
     } else {
       this.isShowed = false;
     }
+      this.headerElement!.nativeElement.style.opacity = '1';
+
     setTimeout(() => {
       this.headerElement!.nativeElement.style.opacity = '1';
       if (this.isShowed === false) {
 
-        this.headerElement!.nativeElement.style.maxHeight = '75px';
+        // this.headerElement!.nativeElement.style.maxHeight = '75px';
       }
 
       // this.headerElement!.nativeElement.style.height = 'auto'
-    }, 1400)
+    }, 1000)
 
   }
 
@@ -106,14 +108,16 @@ export class HeaderComponent {
   showMenu() {
     this.toggleMenu();
     this.isGreen = this.isShowed && window.innerWidth <= 1000;
+    this.headerElement!.nativeElement.style.opacity = '1';
+
     setTimeout(() => {
       this.headerElement!.nativeElement.style.opacity = '1';
       if (this.isShowed === false) {
 
-        this.headerElement!.nativeElement.style.maxHeight = '75px';
+        // this.headerElement!.nativeElement.style.maxHeight = '75px';
       }
 
       // this.headerElement!.nativeElement.style.height = 'auto'
-    }, 1400)
+    }, 750)
   }
 }
