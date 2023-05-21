@@ -1,6 +1,5 @@
 .sub-form {
   display: inline-flex;
-
   width: 20em;
   padding: .375rem .75rem;
   font-size: 1rem;
@@ -17,6 +16,11 @@
 
 .sub-section {
   text-align: center;
+  display: flex;
+  justify-content: space-around;
+  background-color: #fafafa !important;
+  padding-left: 12em;
+  margin: 0;
 }
 
 .sub-btn {
@@ -44,27 +48,25 @@
   background-color: darkgreen;
 }
 
-/* Media Queries */
-@media screen and (max-width: 767px) {
-  .sub-btn {
-    width: auto;
-  }
-}
-
-.sub-section {
-  display: flex;
-  justify-content: space-around;
-  background-color: #fafafa !important;
-  padding-left: 12em;
-  margin: 0;
-}
-
 .sub-section h2 {
   font-size: 2em;
   left: 1rem;
 }
 
-.content{
-top: 0;
-position: relative;
+.content {
+  top: 0;
+  position: relative;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1000px) {
+  .sub-section {
+    padding-top: 5em;
+    text-align: center;
+    display: block;
+    // justify-content: space-between;
+    background-color: #fafafa !important;
+    padding-left: 0;
+    margin: 0;
+  }
 }

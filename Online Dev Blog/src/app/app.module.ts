@@ -6,11 +6,15 @@ import { AppComponent } from './app.component';
 
 import { CoreModule } from './core/core.module';
 import { SubscribeComponent } from './subscribe/subscribe.component';
+import { PostComponent } from './post/post.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SubscribeComponent,
+    PostComponent,
+    AboutComponent
 
   ],
   imports: [
