@@ -8,13 +8,17 @@ import { CoreModule } from './core/core.module';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { PostComponent } from './post/post.component';
 import { AboutComponent } from './about/about.component';
+import { BlogHomeComponent } from './pages/blog-home/blog-home.component';
+import { AboutPageComponent } from './pages/about-page/about-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SubscribeComponent,
     PostComponent,
-    AboutComponent
+    AboutComponent,
+    BlogHomeComponent,
+    AboutPageComponent
 
   ],
   imports: [
