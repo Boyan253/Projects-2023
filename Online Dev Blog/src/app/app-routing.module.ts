@@ -4,6 +4,7 @@ import { PostComponent } from './post/post.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { BlogHomeComponent } from './pages/blog-home/blog-home.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { BlogPostComponent } from './pages/blog-post/blog-post.component';
 
 const routes: Routes = [
   {
@@ -15,7 +16,8 @@ const routes: Routes = [
       { path: 'subscribe', component: SubscribeComponent }
     ]
   },
-  { path: 'about', component: AboutPageComponent }
+  { path: 'about', component: AboutPageComponent },
+  { path: 'details', component: BlogPostComponent }
 ];
 
 

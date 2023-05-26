@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 
 import { CoreModule } from './core/core.module';
 import { SubscribeComponent } from './subscribe/subscribe.component';
@@ -10,6 +11,8 @@ import { PostComponent } from './post/post.component';
 import { AboutComponent } from './about/about.component';
 import { BlogHomeComponent } from './pages/blog-home/blog-home.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { BlogPostComponent } from './pages/blog-post/blog-post.component';
+import { PostDetailsComponent } from './post-details/post-details.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +21,17 @@ import { AboutPageComponent } from './pages/about-page/about-page.component';
     PostComponent,
     AboutComponent,
     BlogHomeComponent,
-    AboutPageComponent
+    AboutPageComponent,
+    BlogPostComponent,
+    PostDetailsComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CoreModule
+    CoreModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

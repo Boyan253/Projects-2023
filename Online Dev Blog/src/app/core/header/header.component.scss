@@ -1,7 +1,7 @@
 @media screen and (max-width: 1000px) {
   // .header {
   //   position: fixed;
-   
+
   //   /* other styles... */
   // }
 
@@ -196,7 +196,7 @@
 }
 
 // Responsive
-@media screen and (max-width: 1000px)  {
+@media screen and (max-width: 1000px) {
 
   /* Show the header when the screen size is less than 700px and the height is at least 700px */
   .header {
@@ -306,8 +306,8 @@
 
   .always-visible {
     opacity: 1;
-  visibility: visible;
-  
+    visibility: visible;
+
   }
 
   .header nav {
