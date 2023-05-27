@@ -17,7 +17,7 @@ const routes: Routes = [
     ]
   },
   { path: 'about', component: AboutPageComponent },
-  { path: 'details', component: BlogPostComponent }
+  { path: 'details/:id', component: BlogPostComponent }
 ];
 
 

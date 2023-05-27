@@ -1,11 +1,13 @@
 import { Component, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { trigger, state, style, animate, transition, group } from '@angular/animations';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
+
   animations: [
     trigger('slideInOut', [
       state('in', style({
@@ -66,7 +68,7 @@ export class HeaderComponent {
   @ViewChild('socials') socialsElement?: ElementRef;
   @ViewChild('nav') navElement?: ElementRef;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
@@ -79,7 +81,7 @@ export class HeaderComponent {
     } else {
       this.isShowed = false;
     }
-      this.headerElement!.nativeElement.style.opacity = '1';
+    this.headerElement!.nativeElement.style.opacity = '1';
 
     setTimeout(() => {
       this.headerElement!.nativeElement.style.opacity = '1';
@@ -120,4 +122,22 @@ export class HeaderComponent {
       // this.headerElement!.nativeElement.style.height = 'auto'
     }, 750)
   }
+  // goToLastPostDetails() {
+  //   const lastPostDetailsString = localStorage.getItem('lastPostDetails');
+  //   if (lastPostDetailsString) {
+  //     const lastPostDetails = JSON.parse(lastPostDetailsString);
+  //     if (lastPostDetails && lastPostDetails.id) {
+  //       this.router.navigate(['/post-details', lastPostDetails.id]);
+  //       return lastPostDetails; // Return lastPostDetails object
+  //     }
+  //   }
+  
+  //   // Redirect to the latest post if no last post details or invalid post id found
+  //   this.router.navigate(['/latest-post']);
+  //   return undefined; // Return null if no valid lastPostDetails
+  // }
+  
+  
+
+
 }

@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SubscribeComponent } from '../subscribe/subscribe.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -14,6 +15,7 @@ import { SubscribeComponent } from '../subscribe/subscribe.component';
   ],
   imports: [
     CommonModule,
+    RouterModule,
     BrowserAnimationsModule
   ],
   exports: [
