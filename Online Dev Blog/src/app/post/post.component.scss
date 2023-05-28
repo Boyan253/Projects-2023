@@ -6,6 +6,10 @@
     padding-left: 19em;
 }
 
+.post-title>a {
+    text-decoration: none;
+}
+
 .post .post-thumbnail {
     flex: 0 0 35%;
     position: relative;

@@ -1,17 +1,21 @@
-<div class="container" *ngIf="post">
+<div class="container"  >
     <div class="row">
         <div class="col-md-8 col-lg-8">
             <article class="article-post">
                 <div class="article-header">
-                    <h1 class="article-title" *ngIf="post.title">{{post.title}}</h1>
-                    <img class="article-img" src={{post.image?.fields.file.url}} alt="">
-                    <div class="article-meta" *ngFor="let tag of tags">
+                    <h1 class="article-title" >post.title</h1>
+                    <img class="article-img" src="https://themes.3rdwavemedia.com/demo/bs5/devblog/assets/images/blog/blog-post-banner.jpg" alt="">
+                    <div class="article-meta">
                         <span class="meta-date"><i class="far fa-clock"></i> May 20, 2023</span>
-                        <span class="meta-category"><i class="far fa-folder"></i> {{tag.sys.id}}</span>
+                        <span class="meta-category"><i class="far fa-folder"></i> Technology</span>
                     </div>
                 </div>
                 <div class="article-content">
-                    <p>{{post.description.content[0].content[0].value}}</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et faucibus felis. Proin id dolor
+                        vel libero finibus sagittis vitae sed tortor. Ut at libero odio. Pellentesque habitant morbi
+                        tristique senectus et netus et malesuada fames ac turpis egestas. Sed fermentum malesuada
+                        tincidunt. Proin bibendum, arcu ac gravida efficitur, mi ipsum sagittis enim, et luctus felis
+                        orci nec felis.</p>
                     <p>Nunc facilisis purus ut libero rhoncus dapibus. Phasellus dignissim erat et enim auctor viverra.
                         Nullam tincidunt lorem et mauris volutpat, sit amet accumsan est laoreet. Sed ut justo vel massa
                         efficitur commodo. Morbi vel enim dui. Sed eget nisi eget erat rhoncus auctor. Duis ut nulla

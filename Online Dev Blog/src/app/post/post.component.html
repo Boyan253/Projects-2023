@@ -14,14 +14,13 @@
 </article> --><!-- Single Post -->
 <div class="post" *ngFor="let post of posts">
     <div class="post-thumbnail">
-        <a href="post.html">
-            <img src="https://th.bing.com/th/id/OIP.o1Vb4jMGdx9q4wBVFGPxqwAAAA?pid=ImgDet&w=208&h=208&c=7"
-                alt="Post Image">
+        <a [routerLink]="['/details', post.sys.id]">
+            <img src={{post.fields.thumbnail?.fields.file.url}} alt="Post Image">
         </a>
     </div>
     <div class="post-content">
         <h2 class="post-title">
-            <a href="post.html">{{post.fields.title}}</a>
+            <a [routerLink]="['/details', post.sys.id]">{{post.fields.title}}</a>
         </h2>
         <div class="post-meta">
             <span class="post-date">{{post.fields.date}}</span>

@@ -5,6 +5,7 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
 import { BlogHomeComponent } from './pages/blog-home/blog-home.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { BlogPostComponent } from './pages/blog-post/blog-post.component';
+import { LatestPostComponent } from './latest-post/latest-post.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,7 @@ const routes: Routes = [
     ]
   },
   { path: 'about', component: AboutPageComponent },
+  { path: 'latest-post', component: LatestPostComponent },
   { path: 'details/:id', component: BlogPostComponent }
 ];
 

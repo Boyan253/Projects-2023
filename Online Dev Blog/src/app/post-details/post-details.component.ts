@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ServiceService } from '../service.service';
+import * as contentful from 'contentful';
 
 @Component({
   selector: 'app-post-details',
@@ -10,29 +11,28 @@ import { ServiceService } from '../service.service';
 export class PostDetailsComponent implements OnInit {
   postId: any;
   post: any;
-
+  tags: any[] = [];
   constructor(private route: ActivatedRoute, private apiService: ServiceService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
-      console.log(params);
-
       this.postId = params['id'];
       console.log(this.postId);
 
-      this.loadPostDetails();
+      const client = contentful.createClient({
+        space: 'd2r7x1sflies',
+        accessToken: 'arsLeKD_m-HpGAzLwzM8YQUL0WPsrwz7LKo1-5ch5Pw',
+      });
+
+      client.getEntry(this.postId).then(entry => {
+        this.post = entry.fields;
+        
+        this.tags = entry.metadata.tags
+        console.log(this.tags[0].sys.id);
+        
+      }).catch(error => {
+        console.log(error);
+      });
     });
-  }
-  loadPostDetails() {
-    this.apiService.getPostDetails(this.postId).subscribe(
-      (value: any) => {
-        console.log(value); //  API response contains the complete post details
-        this.post = value.fields; // assign the post details to the 'post' property
-        localStorage.setItem('lastPostDetails', JSON.stringify({ id: this.postId }));
-      },
-      (err: any) => {
-        console.log(err);
-      }
-    );
   }
 }

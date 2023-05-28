@@ -13,6 +13,7 @@ import { BlogHomeComponent } from './pages/blog-home/blog-home.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { BlogPostComponent } from './pages/blog-post/blog-post.component';
 import { PostDetailsComponent } from './post-details/post-details.component';
+import { LatestPostComponent } from './latest-post/latest-post.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PostDetailsComponent } from './post-details/post-details.component';
     BlogHomeComponent,
     AboutPageComponent,
     BlogPostComponent,
-    PostDetailsComponent
+    PostDetailsComponent,
+    LatestPostComponent
 
   ],
   imports: [
