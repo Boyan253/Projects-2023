@@ -4,8 +4,12 @@ import { Component } from '@angular/core';
   selector: 'app-subscribe',
   templateUrl: './subscribe.component.html',
   styleUrls: ['./subscribe.component.scss'],
-  
 })
 export class SubscribeComponent {
+  constructor() { }
 
+  subNotification() {
+    alert('Subscribe is Not Working Right Now');
+    console.log('here');
+  }
 }

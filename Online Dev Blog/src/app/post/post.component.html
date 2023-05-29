@@ -30,7 +30,7 @@
             <span class="post-comments">{{post.fields.comments.comments.length}} Comments</span>
         </div>
         <p class="post-excerpt">
-            {{post.fields.description.content[0].content[0].value}}
+            {{post.fields.description?.content[0].content[0].value}}
         </p>
         <a class="post-read-more" [routerLink]="['/details', post.sys.id]">Read More</a>
     </div>

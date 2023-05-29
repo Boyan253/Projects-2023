@@ -7,7 +7,7 @@
                     <img class="article-img" src={{post.image?.fields.file.url}} alt="">
                     <div class="article-meta" *ngFor="let tag of tags">
                         <span class="meta-date"><i class="far fa-clock"></i> May 20, 2023</span>
-                        <span class="meta-category"><i class="far fa-folder"></i> {{tag.sys.id}}</span>
+                        <span class="meta-category"><i class="far fa-folder"></i> {{tag? tag.sys.id : 'No tags'}}</span>
                     </div>
                 </div>
                 <div class="article-content">
