@@ -22,19 +22,14 @@
                     <!-- section 3 info -->
 
                     <h2>{{post.section3Title}}</h2>
-                    <p>Aliquam fermentum ultrices semper. Proin venenatis lorem in neque iaculis, ac cursus nunc
-                        aliquet. Cras id justo eu metus viverra varius a vitae magna. Sed hendrerit fringilla nunc, vel
-                        luctus purus euismod nec. Sed malesuada odio id lacus vestibulum dapibus. Aenean faucibus, elit
-                        in auctor pulvinar, ligula metus semper nibh, a aliquet tellus turpis nec purus.</p>
+                    <p>{{post.section3UseCase.content[0].content[0].value}}</p>
                     <blockquote>
-                        <p>Quisque ullamcorper leo et sapien consectetur, quis fermentum ex molestie. Cras at ex
-                            sollicitudin, elementum nulla vel, porttitor tortor. Nullam at orci lobortis, luctus urna
-                            nec, convallis sem.</p>
+                        <p>{{post.blockquote1.content[0].content[0].value}}</p>
                     </blockquote>
-                    <p>Donec id nisi euismod, luctus odio nec, sollicitudin sem. Fusce fermentum, velit eu euismod
-                        egestas, risus nibh aliquam purus, non tempor sem quam eget nisi. Aliquam vitae felis urna. Cras
-                        elementum odio eget erat ullamcorper, in pulvinar urna placerat. Nullam non gravida libero, id
-                        pharetra lectus. Suspendisse posuere elementum fringilla. Suspendisse potenti.</p>
+                    <p><sub>{{post.section4Title}}</sub></p>
+                    <p>{{post.section4Facts.content[0].content[0].value}}</p>
+                    <a href="{{post.section4Facts.content[1].content[1].content[0].value}}">MDN library</a>
+                    
                     <!-- <ul *ngIf="post.table !== undefined">
                         <li *ngFor="let li of post.table.content[0].content[1].content">
                             {{li.content[0].content[0].data.value}}</li>
@@ -51,8 +46,7 @@
                 <div class="widget">
                     <h5 class="widget-title">About Me</h5>
                     <div class="widget-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fringilla lacus euismod augue
-                            blandit, non condimentum urna fermentum.</p>
+                        <a href="/about">Hello there! My name is Boyan, and I'm delighted to welcome you to my online development blog.</a>
                     </div>
                 </div>
                 <div class="widget">
