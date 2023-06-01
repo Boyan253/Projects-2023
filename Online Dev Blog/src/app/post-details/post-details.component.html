@@ -5,9 +5,10 @@
                 <div class="article-header">
                     <h1 class="article-title" *ngIf="post.title">{{post.title}}</h1>
                     <img class="article-img" src={{post.image?.fields.file.url}} alt="">
-                    <div class="article-meta" *ngFor="let tag of tags">
+                    <div class="article-meta">
                         <span class="meta-date"><i class="far fa-clock"></i> May 20, 2023</span>
-                        <span class="meta-category"><i class="far fa-folder"></i> {{tag? tag.sys.id : 'No tags'}}</span>
+                        <span class="meta-category " *ngFor="let tag of tags"> <i class="far fa-folder"></i> {{tag?
+                            tag.sys.id : 'No tags'}}</span>
                     </div>
                 </div>
                 <div class="article-content">
@@ -29,7 +30,7 @@
                     <p><sub>{{post.section4Title}}</sub></p>
                     <p>{{post.section4Facts.content[0].content[0].value}}</p>
                     <a href="{{post.section4Facts.content[1].content[1].content[0].value}}">MDN library</a>
-                    
+
                     <!-- <ul *ngIf="post.table !== undefined">
                         <li *ngFor="let li of post.table.content[0].content[1].content">
                             {{li.content[0].content[0].data.value}}</li>
@@ -46,7 +47,8 @@
                 <div class="widget">
                     <h5 class="widget-title">About Me</h5>
                     <div class="widget-content">
-                        <a href="/about">Hello there! My name is Boyan, and I'm delighted to welcome you to my online development blog.</a>
+                        <a href="/about">Hello there! My name is Boyan, and I'm delighted to welcome you to my online
+                            development blog.</a>
                     </div>
                 </div>
                 <div class="widget">
