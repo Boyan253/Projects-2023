@@ -2,7 +2,9 @@
 .container {
     max-width: 1000px;
     /* Adjusted to 600px */
-    font-family: cursive;
+
+    font-family: "Open Sans", Arial, sans-serif;
+
     margin: 0 auto;
     padding-left: 250px;
     /* Adjusted padding for better responsiveness */
@@ -46,6 +48,7 @@
 /* Content styles */
 .article-content {
     font-size: 16px;
+        line-height: 1.4;
     color: #333;
 }
 
