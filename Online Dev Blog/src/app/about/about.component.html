@@ -4,7 +4,7 @@
 
         <p>Hello there! My name is <strong>Boyan</strong>, and I'm delighted to welcome you to my online development
             blog. At the
-            age of 19, I'm a passionate JavaScript programmer with expertise in various technologies such as
+            age of 18, I'm a passionate JavaScript programmer with expertise in various technologies such as
             <strong>React,
                 Express, Angular, TypeScript, Node.js, HTML, and CSS.</strong>
         </p>
@@ -23,7 +23,7 @@
             developer and software enthusiast. Join me as we explore the fascinating realm of technology and learn
             together.</p>
         <p>Thank you for visiting, and I hope you find my content inspiring and informative!</p>
-        <figure><img class="img-fluid" src="/assets/images/349569559_1001282470858546_2538220659857749179_n.jpg"
+        <figure><img class="img-fluid" id="profile-pic"src="/assets/images/349569559_1001282470858546_2538220659857749179_n.jpg"
                 alt="image"></figure>
         <h5 class="mt-5">About The Blog</h5>
         <h1>Welcome to my web development blog</h1>
@@ -70,14 +70,29 @@
             high-quality solutions.</p>
         <p>I am excited to apply my skills and experiences to new projects and further enhance my capabilities as a
             developer.</p>
-        <h5 class="mt-5">Side Projects</h5>
-        <p>Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat
-            vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
-            nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
-            ullamcorper ultricies nisi.</p>
+      <div class="side-projects">
+    <h5 class="mt-5">Side Projects</h5>
 
-        <figure><a href="https://made4dev.com"><img class="img-fluid"
-                    src="data:image/jpeg;base64,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"
-                    alt="image"></a></figure>
+    <div class="image-container">
+        <figure>
+            <a href="https://thefuture-eta.vercel.app/">
+                <img class="img-fluid" src="../../assets/images/TheFuture.png" alt="image">
+            </a>
+        </figure>
+
+        <figure>
+            <a href="https://softuniadahotel.onrender.com/">
+                <img class="img-fluid" src="../../assets/images/Home.png" alt="image">
+            </a>
+        </figure>
+        <!-- <figure>
+            <a href="https://made4dev.com">
+                <img class="img-fluid" src="data:image/jpeg;base64,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" alt="image">
+            </a>
+        </figure> -->
+        <!-- Add two more figures with similar structure for your other images -->
+    </div>
+</div>
+
     </div>
 </article>
