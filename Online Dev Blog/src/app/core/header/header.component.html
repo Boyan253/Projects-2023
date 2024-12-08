@@ -3,8 +3,13 @@
     <div #header [@slideInOut]="stateName" [style.opacity]="isShowed ? '1' : '1'">
         <div class="logo" #logo>
             <br>
-            <h1 #h1 [style.visibility]="isShowed ? 'visible' : 'visible'" [style.opacity]="isShowed ? '1' : '1'">Boqn's
-                Blog</h1>
+            <h1 
+            id="h1" 
+            [style.visibility]="isShowed ? 'visible' : 'visible'" 
+            [style.opacity]="isShowed ? '1' : '1'"
+          >
+            <span class="blue-box">Boqn's</span> Blog
+          </h1>
             <img #img src="https://avatars.githubusercontent.com/u/97385003?v=4" alt="none">
         </div>
         <br>
