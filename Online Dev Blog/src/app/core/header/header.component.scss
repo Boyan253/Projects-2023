@@ -20,7 +20,8 @@
     height: 30px;
     cursor: pointer;
   }
-
+ 
+  
   /* Adjust the position and style of the hamburger icon */
   .hamburger::before {
     content: '☰';
@@ -62,7 +63,13 @@
     top: 0;
   }
 }
-
+ .blue-box {
+    color: #1E90FF; 
+    border: 2px solid #1E90FF; 
+    padding: 4px 8px; 
+    background-color: blue;
+    border-radius: 4px; 
+  }
 /* Add this CSS to adjust the layout */
 @media screen and (min-width: 1000px) {
   .header {
@@ -216,7 +223,7 @@
 
 
   .header h1 {
-    margin: 0;
+    margin: 10px;
     padding-bottom: 20px;
     color: #f5f2f2;
   }
